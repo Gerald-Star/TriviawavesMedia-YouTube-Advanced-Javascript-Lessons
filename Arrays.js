@@ -196,9 +196,9 @@ console.log(allFruits);
 // ["banana", "blueberry", "grapes", "peach", "strawberry", "watermelon"]
 
 //13. Array.prototype.fill() with length property
-const numbers = [1, 2, 3, 4, 5];
+const numberArrays = [1, 2, 3, 4, 5];
 numbers.fill(0, 2, 4);
-console.log(numbers); // [1, 2, 0, 0, 5] // returns the modified array
+console.log(numberArrays); // [1, 2, 0, 0, 5] // returns the modified array
 
 fruitTypes[3] = 'mango';
 console.log(fruitTypes[3]); // mango // modify an element at a specific index

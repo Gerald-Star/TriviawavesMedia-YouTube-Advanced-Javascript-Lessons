@@ -374,3 +374,26 @@ console.log(squaredNumbers); // [1, 4, 9, 16, 25] // returns a new array
 Always add websites to learn more
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 
+
+
+
+
+## MATHS METHOD FUNCTION
+
+The Math object in JavaScript provides various mathematical operations and functions. Some commonly used methods include:
+
+Math.abs(x): Returns the absolute value of x.
+Math.ceil(x):
+
+The Math object in JavaScript provides various mathematical operations and functions. Some commonly used methods include:
+
+- Math.abs(x): Returns the absolute value of x.
+- Math.ceil(x): Returns the smallest integer greater than or equal to x.
+- Math.floor(x): Returns the largest integer less than or equal to x.
+- Math.round(x): Returns the value of x rounded to the nearest integer.
+- Math.max(x1, x2, ...): Returns the largest value among the given arguments.
+- Math.min(x1, x2, ...): Returns the smallest value among the given arguments.
+- Math.random(): Returns a random number between 0 (inclusive) and 1 (exclusive).
+- Math.sqrt(x): Returns the square root of x.
+
+These are just a few examples. The Math object provides many more methods for performing various mathematical calculations.
