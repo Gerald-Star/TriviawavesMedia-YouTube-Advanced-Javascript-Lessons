@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+
+
+<body>
+  <style>
+    body {
+      width: 80%;
+      max-width: 1024px;
+      margin: 0 auto;
+    }
+
+    .container-padding50 {
+      padding-top: 50px;
+    }
+
+    .container-textinput {
+      width: 80%;
+      display: inline-block;
+      padding: 20px;
+      font-size: 16px;
+      font-family: Helvetica, sans-serif;
+    }
+
+    .container-button {
+      width: 10%;
+      display: inline-block;
+      padding: 20px;
+      background-color: green;
+      color: white;
+      font-size: 16px;
+      font-family: Helvetica, sans-serif;
+
+      border: 1px solid green;
+      border-radius: 5px;
+    }
+
+    .container-image {
+      width: 30%;
+      display: block;
+      float: left;
+      margin-right: 3%;
+    }
+  </style>
+  <script>
+    /* 1. Grab the input value */
+
+    document.querySelector(".js-go").addEventListener('click', function () {
+
+      var input = document.querySelector("input").value;
+      console.log(input);
+      pushToDOM(input);
+    });
+
+    /**
+     * Using the which event property we can tell if the user pressed the keys down. 
+     * Actually, we can even "listen" to see what specific keys they are typing.
+     */
+
+    document.querySelector(".js-userinput").addEventListener('keyup', function (e) {
+
+      var input = document.querySelector("input").value;
+      console.log(input);
+
+      // if the key ENTER is pressed...
+      if (e.which === 13) {
+        pushToDOM(input);
+      }
+
+    });
+
+
+    var url = "THE_URL_TO_CALL_GOES_HERE";
+
+      // AJAX Request
+      var GiphyAJAXCall = new XMLHttpRequest();
+      GiphyAJAXCall.open('GET', url);
+      GiphyAJAXCall.send();
+
+
+      GiphyAJAXCall.addEventListener('load', function (data) {
+
+        // your callback events go here 
+
+      });
+
+
+    /* 2. do the data stuff with the API */
+
+      var url = "http://api.giphy.com/v1/gifs/search?q=funny+cat&api_key=dc6zaTOxFJmzC";
+
+      // AJAX Request
+      var GiphyAJAXCall = new XMLHttpRequest();
+      GiphyAJAXCall.open('GET', url);
+      GiphyAJAXCall.send();
+
+      GiphyAJAXCall.addEventListener('load', function (e) {
+
+        var data = e.target.response;
+        console.log(data);
+
+      });
+
+
+    /* 3. Show me the GIFs */
+
+    function pushToDOM(input) {
+
+      alert("are we in pushToDom?");
+      var container = document.querySelector(".js-container");
+      container.innerHTML = input;
+
+    }
+
+  </script>
+
+</body>
+
+</html>
